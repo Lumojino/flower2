@@ -2,7 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './footer.module.scss';
 
+// Copyright component
+const Copyright: React.FC<{ year: number; companyName: string }> = ({ year, companyName }) => (
+  <p>&copy; {year} {companyName}. All rights reserved.</p>
+);
+
+// Footer component
 const Footer: React.FC = () => {
+  // Define your copyright information
+  const copyrightYear = 2023;
+  const companyName = 'POWER FLOWER';
+
   return (
     <footer className={styles['footer-container']}>
       <nav className={styles['footer-nav']}>
@@ -16,7 +26,8 @@ const Footer: React.FC = () => {
           FAQ
         </Link>
       </nav>
-      <p>&copy; 2023 POWER FLOWER. All rights reserved.</p>
+      {/* Use the Copyright component with dynamic data */}
+      <Copyright year={copyrightYear} companyName={companyName} />
     </footer>
   );
 };
