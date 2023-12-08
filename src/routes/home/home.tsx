@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './home.module.scss';
 import heroImage from '../../assets/svg/Logosvg.svg';
-import instagramIcon from '../../assets/svg/Instagram Old.svg';
+import instagramIcon from '../../assets/svg/Instagram.svg';
 import tiktokIcon from '../../assets/svg/TikTok.svg';
 import xIcon from '../../assets/svg/TwitterX.svg';
 import facebookIcon from '../../assets/svg/Facebook.svg';
