@@ -7,9 +7,12 @@ import homeLogo from "../../assets/svg/Logosvg.svg";
 import shopIcon from "../../assets/svg/Shopping Cart.svg"
 
 const Nav: React.FC = () => { // Change 'nav' to 'Nav' here
+    // eslint-disable-next-line
   const [showPopup, setShowPopup] = useState<boolean>(false);
+    // eslint-disable-next-line
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showBurger, setShowBurger] = useState<boolean>(false);
+    // eslint-disable-next-line
   const navigate = useNavigate();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const burgerRef = useRef<HTMLDivElement | null>(null);

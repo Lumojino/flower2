@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           YOUR FULL SERVICE FLORIST <br />
           FOR EVERY OCCASION
         </h2>
-        <img src={heroImage} alt="Hero Image" className={styles['hero-image']} />
+        <img src={heroImage} alt="Hero Landscape" className={styles['hero-image']} />
       </div>
 
       {/* Add other content as needed */}
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       <div className={styles['how-it-works-container']}>
         <h3 className={styles['how-it-works-heading']}>HOW IT WORKS ?</h3>
         <button className={styles['how-it-works-button']}>SHOP NOW</button>
-        <img src={feeImage} alt="Fee Image" className={styles.feeImage} />
+        <img src={feeImage} alt="Fee" className={styles['feeImage']} />
       </div>
     </div>
   );
