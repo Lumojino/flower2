@@ -1,19 +1,18 @@
-// Nav.tsx
+// Import necessary modules
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../nav/nav.module.scss";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 import closeIcon from '../../assets/svg/Cancel.svg';
 import homeLogo from "../../assets/svg/Logosvg.svg";
-import shopIcon from "../../assets/svg/Shopping Cart.svg"
+import shopIcon from "../../assets/svg/Shopping Cart.svg";
 
-const Nav: React.FC = () => { // Change 'nav' to 'Nav' here
-    // eslint-disable-next-line
+// Define your Nav component
+const Nav: React.FC = () => {
   const [showPopup, setShowPopup] = useState<boolean>(false);
-    // eslint-disable-next-line
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showBurger, setShowBurger] = useState<boolean>(false);
-    // eslint-disable-next-line
   const navigate = useNavigate();
+  const location = useLocation(); // Get the current location
   const menuRef = useRef<HTMLDivElement | null>(null);
   const burgerRef = useRef<HTMLDivElement | null>(null);
 
@@ -70,6 +69,9 @@ const Nav: React.FC = () => { // Change 'nav' to 'Nav' here
     setShowMenu(false);
   };
 
+  // Function to determine if a link is active
+  const isLinkActive = (pathname: string) => location.pathname === pathname;
+
   return (
     <nav className={styles.nav}>
       <RouterLink to="/" className={styles["logo-link"]}>
@@ -83,10 +85,18 @@ const Nav: React.FC = () => { // Change 'nav' to 'Nav' here
       )}
 
       <div ref={menuRef} className={`${styles["nav-links"]} ${showMenu ? styles.active : ""}`}>
-        <RouterLink to="/store" className={styles["nav-link"]} onClick={handleLinkClick}>
+        <RouterLink
+          to="/store"
+          className={`${styles["nav-link"]} ${isLinkActive("/store") ? styles.active : ""}`}
+          onClick={handleLinkClick}
+        >
           STORE
         </RouterLink>
-        <RouterLink to="/contact" className={styles["nav-link"]} onClick={handleLinkClick}>
+        <RouterLink
+          to="/contact"
+          className={`${styles["nav-link"]} ${isLinkActive("/contact") ? styles.active : ""}`}
+          onClick={handleLinkClick}
+        >
           CONTACT US
         </RouterLink>
       </div>
@@ -96,10 +106,18 @@ const Nav: React.FC = () => { // Change 'nav' to 'Nav' here
           <div className={styles["close-icon"]} onClick={handleCloseIconClick}>
             <img src={closeIcon} alt="Close" style={{ width: '30px' }} />
           </div>
-          <RouterLink to="/store" className={styles["nav-link"]} onClick={handleLinkClick}>
+          <RouterLink
+            to="/store"
+            className={`${styles["nav-link"]} ${isLinkActive("/store") ? styles.active : ""}`}
+            onClick={handleLinkClick}
+          >
             STORE
           </RouterLink>
-          <RouterLink to="/contact" className={styles["nav-link"]} onClick={handleLinkClick}>
+          <RouterLink
+            to="/contact"
+            className={`${styles["nav-link"]} ${isLinkActive("/contact") ? styles.active : ""}`}
+            onClick={handleLinkClick}
+          >
             CONTACT US
           </RouterLink>
         </div>

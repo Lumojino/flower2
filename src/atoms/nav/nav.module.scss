@@ -12,17 +12,21 @@
     &.active {
         flex-direction: column; // Change direction when active (e.g., dropdown)
     }
-    .nav-link {
-        margin-top: 7vh;
-        font-family: "roboto";
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-        margin-right: 2vw; // Adjust the margin between links
-        cursor: pointer;
-        &:last-child {
-            margin-right: 0; // Remove margin for the last link
-        }
+}
+
+.nav-link {
+    margin-top: 7vh;
+    font-family: "roboto";
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-right: 2vw; // Adjust the margin between links
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0; // Remove margin for the last link
+    }
+    &.active {
+        border-bottom: 2px solid #FF10F0; // Set your desired color here
     }
 }
 
