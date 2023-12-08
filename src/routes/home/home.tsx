@@ -15,18 +15,18 @@ const Home: React.FC = () => {
           YOUR FULL SERVICE FLORIST <br />
           FOR EVERY OCCASION
         </h2>
-        <img src={heroImage} alt="Hero Landscape" className={styles['hero-image']} />
-      </div>
-
-      {/* Add other content as needed */}
-
-      <div className={styles['social-icons-container']}>
+        <div className={styles['social-icons-container']}>
         {/* Individual social icons */}
         <img src={instagramIcon} alt="Instagram" className={styles['social-icon']} />
         <img src={tiktokIcon} alt="TikTok" className={styles['social-icon']} />
         <img src={xIcon} alt="X" className={styles['social-icon']} />
         <img src={facebookIcon} alt="Facebook" className={styles['social-icon']} />
       </div>
+      </div>
+
+      {/* Add other content as needed */}
+
+    
 
       {/* How it Works section */}
       <div className={styles['how-it-works-container']}>
