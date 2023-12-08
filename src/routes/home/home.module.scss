@@ -75,7 +75,7 @@ body {
     color: #FF10F0;
     text-align: center;
     margin-top: 15vh;
-    margin-left: 13.5vw;
+    margin-left: -2vw;
     @media (max-width: 450px) {
         font-size: 3vw;
         margin-left: -5vw;
@@ -103,6 +103,10 @@ body {
 
 .how-it-works-button:hover {
     background-color: rgba(255, 16, 240, 1);
+}
+
+.feeVideo {
+    margin-left: -1vw;
 }
 
 .feeImage {

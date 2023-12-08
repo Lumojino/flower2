@@ -60,13 +60,14 @@
 @media screen and (max-width: 450px) {
     .nav-links {
         display: none;
-        text-align: left;
     }
     .nav-link {
         text-decoration: none;
         color: white;
         font-weight: bold;
         margin-top: 5vh;
+        text-align: center;
+        margin-left: -2vw;
     }
     .burger-icon {
         margin-left: 80vw;
