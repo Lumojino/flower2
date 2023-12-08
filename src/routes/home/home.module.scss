@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #29132D;
+    color: #FFFFFF;
+}
+
+.home-container {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 100vh;
+    @media (max-width: 450px) {
+        margin-bottom: 40vh;
+    }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.home-heading {
+    font-family: 'Rowdies', Arial, sans-serif;
+    font-size: 2.5vw;
+    color: #FF10F0;
+    text-align: center;
+    margin-top: 15vh;
+    margin-left: 15vw;
+    @media (max-width: 450px) {
+        font-size: 3.5vw;
+        margin-left: 8vw;
+        margin-top: 10vh;
+    }
+}
+
+.hero-image {
+    margin-top: 8vh;
+    margin-right: 10vw;
+    max-width: 25vw;
+    height: auto;
+    @media (max-width: 450px) {
+        margin-right: 2vw;
+    }
+}
+
+.social-icons-container {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    margin-top: 45vh;
+    margin-left: 25vw;
+    @media (max-width: 450px) {
+        margin-top: 20vh;
+        margin-left: 20vw;
+    }
+}
+
+.social-icon {
+    width: 2.5vw;
+    height: auto;
+    margin-right: 1vw;
+    transition: opacity 0.3s ease;
+    &:hover {
+        opacity: 0.5;
+    }
+    @media (max-width: 450px) {
+        width: 5vw;
+    }
+}
+
+.how-it-works-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 30%;
+}
+
+.how-it-works-heading {
+    font-family: 'Rowdies', Arial, sans-serif;
+    font-size: 2vw;
+    color: #FF10F0;
+    text-align: center;
+    margin-top: 15vh;
+    margin-left: 13.5vw;
+    @media (max-width: 450px) {
+        font-size: 3vw;
+        margin-left: -12vw;
+    }
+}
+
+.how-it-works-button {
+    cursor: pointer;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    margin-left: 45vw;
+    display: inline-block;
+    border: none;
+    font-size: 1vw;
+    width: 7vw;
+    height: 3vh;
+    background-color: rgba(255, 16, 240, 0.35);
+    @media (max-width: 450px) {
+        width: 20vw;
+        font-size: 2vw;
+        margin-left: 35vw;
+    }
+}
+
+.how-it-works-button:hover {
+    background-color: rgba(255, 16, 240, 1);
+}
+
+.feeImage {
+    position: relative;
+    width: 70vw;
+    margin-left: 13.5vw;
+    @media (max-width: 450px) {
+        margin-left: -9vw;
+        width: 110vw;
+    }
+}

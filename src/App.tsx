@@ -1,26 +1,41 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './atoms/nav/nav';
+import Footer from './atoms/footer/footer';
+import Home from './routes/home/home';
+import Store from './routes/store/store';
+import ContactUs from './routes/contact-us/contactus';
 
-function App() {
+const routes = [
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/store',
+    element: <Store />,
+  },
+  {
+    path: '/contact',
+    element: <ContactUs />,
+  },
+];
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Routes>
+          {routes.map((route, i) => (
+            <Route key={i} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

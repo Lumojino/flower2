@@ -1,0 +1,91 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    @media (max-width: 450px) {
+        display: none; // Hide nav links on small screens
+    }
+    &.active {
+        flex-direction: column; // Change direction when active (e.g., dropdown)
+    }
+    .nav-link {
+        margin-top: 7vh;
+        font-family: "roboto";
+        font-weight: bold;
+        color: #FF10F0;
+        text-decoration: none;
+        margin-right: 2vw; // Adjust the margin between links
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0; // Remove margin for the last link
+        }
+    }
+}
+
+.home-logo {
+    position: absolute;
+    width: 4vw;
+    margin-left: 4%;
+    margin-top: -0.5%;
+}
+
+.shop-icon {
+    width: 3vw;
+    margin-left: -10vw;
+    margin-top: 4.5vh;
+}
+
+.dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 16, 240, 0.80);
+    /* RGBA with 0.4 opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Media Query for smaller screens */
+
+@media screen and (max-width: 450px) {
+    .nav-links {
+        display: none;
+        text-align: left;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin-top: 5vh;
+    }
+    .burger-icon {
+        margin-left: 5vw;
+        margin-top: 5vh;
+        display: block;
+        color: #FF10F0;
+        font-size: 6vw;
+        /* Adjust the font size as needed */
+    }
+    .close-icon {
+        position: absolute;
+        margin-top: -80vh;
+        margin-left: 60vw;
+        /* Adjust the size as needed */
+    }
+    .shop-icon {
+        display: none;
+    }
+    .home-logo {
+        width: 10vw;
+    }
+}

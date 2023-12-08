@@ -1,0 +1,23 @@
+.footer-container {
+    position: relative;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    /* Stack the links vertically */
+    align-items: center;
+    /* Center the links horizontally */
+}
+
+.footer-link {
+    margin-bottom: 5vh;
+    text-decoration: none;
+    font-family: "roboto";
+    font-weight: bold;
+    color: #FF10F0;
+    /* Optional: Add some margin between the links for better spacing */
+}
